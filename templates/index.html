@@ -2,8 +2,7 @@
 <html>
 <head>
     <title>SWARCH</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')
-}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <h1>PRODUCT</h1>
@@ -13,6 +12,17 @@
         <label for="description">Descripción:</label><br>
         <textarea id="description" name="description"></textarea><br>
         <button type="submit">Crear</button>
+    </form>
+    <h1>UPDATE PRODUCT</h1>
+    <form method="POST" action="/products/update">
+        <input type="hidden" name="_method" value="PUT">
+        <label for="id">ID:</label><br>
+        <input type="text" id="id" name="id" required><br>
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="description">Descripción:</label><br>
+        <textarea id="description" name="description"></textarea><br>
+        <button type="submit">Actualizar</button>
     </form>
 </body>
 </html>
